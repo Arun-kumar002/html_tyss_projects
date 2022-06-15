@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Exo+2&family=Oswald:wght@500&family=Poppins&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Exo+2&family=Oswald:wght@500&family=Poppins&family=Russo+One&display=swap');
+
+
+*
+{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+:root
+{
+
+    --base-color:#fef5e7;
+}
+body
+{
+   background-color: #fff;
+  
+ 
+}
+/* ?header section starts here */
+#headermain
+{
+ height: 150px;
+ width: 100%;
+ background-color: var(--base-color);
+ background: url("../images/colorpic.PNG") no-repeat;
+ background-size: cover;
+}
+#headermain article{
+
+
+font-family: 'Alfa Slab One', cursive;
+}
+#headermain article
+{
+    height: inherit;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% auto;
+}
+.logo a
+{
+    font-size: 25px;
+    letter-spacing: 0.3px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: #444;
+  
+ 
+}
+.logo span
+
+{
+    font-family: 'Alfa Slab One', cursive;
+}
+.logoicon i
+{
+    font-size: 50px;
+}
+._menu div span
+{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.navbar a
+{
+    text-decoration: none;
+    font-size: 15px;
+    color: #444;
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 300;
+}
+.navbar ul li a
+{
+    font-family: 'Oswald', sans-serif; 
+}
+.logo
+{
+    flex-basis: 50%;
+}
+._menu
+{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.navbar ul
+{
+    width: 530px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0px 0px ;
+    list-style-type: none;
+}
+#express
+{
+letter-spacing: 1.2px;
+}
+#bikealign
+{
+    margin: 0 7px;
+}
+
+
+/* ?header section ends here */
+/* ?slider start here */
+#sliderblock
+{
+   background-image: url("../images/colorpic.PNG");
+   max-height: 600px;
+   min-height: 600px;
+    
+}
+#sliderblock article
+{
+    display: flex;
+    width: 95%;
+    margin: 0% auto;
+    height: 600px;
+    align-items: center;
+}
+#sliderblock article :is(#leftslider,#rightslider)
+{
+    flex-basis: 50%;
+    justify-content: start;
+    display: flex;
+}
+#glow_img img 
+{
+    width: 300px;
+}
+#rightslider > div
+{
+    position: relative;
+}
+#burger_img
+{
+    position: absolute;
+    top: -33px;
+    z-index: 1;
+    right: -408px;
+}
+
+#drinks_img{
+    position: absolute;
+    right: -493px;
+    top: -153px;
+
+}
+#french_img
+{
+    position: relative;
+    top: -40px;
+    right: -90px;
+}
+#glow_img
+{
+    position: absolute;
+    top: -220px;
+    right: -350px;
+    width: 400px;
+}
+#leftslider h4
+{
+    border:2px dashed ;
+    padding: 10px;
+    text-transform: uppercase #555;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #444;
+    display: inline-block;
+    text-transform: uppercase;
+}
+#leftslider :is(h1,h3)
+{
+    color: #3d2514;
+    letter-spacing: 3.5px;
+    letter-spacing: 5px;
+    text-shadow: 6px 4px 3px  #fee8bc;
+}
+#leftslider h1
+{
+    font-size: 5.6em;
+    font-family: 'Alfa Slab One', cursive;
+    padding-top: 10px;
+}
+#leftslider h3{
+    font-size: 3.8em;
+    font-family: 'Alfa Slab One', cursive;
+}
