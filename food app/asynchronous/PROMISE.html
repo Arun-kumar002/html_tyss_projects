@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let promise=new Promise(function(resolve,reject){
+            resolve("i am primise 1")
+
+        });
+        let promise1=new Promise(function(resolve,reject){
+            resolve("i am promise 2")
+        });
+        let promise2=new Promise(function(resolve,reject){
+            reject("i am promise 3")
+        });
+        // Promise.all([promise,promise1,promise2]).then((val)=>{
+        //        console.log(val);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // });
+        Promise.reject([promise,promise1,promise2]).then(x=>console.log(x))
+
+
+     
+    </script>
+</body>
+</html>

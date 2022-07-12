@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ></div>
+    <script>
+        // let x="im first";
+        // setTimeout(()=>{
+        //     console.log("im am second");
+        //     alert("hi")
+        // },10000);
+        // console.log(x);
+        window.setInterval(()=>{
+            let time=new Date();
+            let hh=time.getHours();
+            let min=time.getMinutes();
+            let ss=time.getSeconds()
+            // document.querySelector("div").innerHTML=new Date().toLocaleTimeString();
+            document.querySelector("div").innerHTML=`${hh}:${min}:${ss}`;
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to get cors server datas</title>
+</head>
+<body> 
+    <script>
+        let githubapi=function(){
+            return new Promise(function(resolve,reject){
+                let ajaxfetch=new XMLHttpRequest();
+                ajaxfetch.open("GET","https://api.github.com/users");
+                ajaxfetch.onload=function(){
+                    resolve(JSON.parse(this.response))
+                }
+                ajaxfetch.onerror=function(){
+                    reject(this.response)
+                }
+                ajaxfetch.send();
+            });
+           
+        }
+        let newsApi=function(){
+            return new Promise(function(resolve,reject){
+                let ajaxfetch=new XMLHttpRequest();
+                ajaxfetch.open("GET","https://chroniclingamerica.loc.gov/search/titles/results/?terms=oakland&format=json&page=5");
+                ajaxfetch.onload=function(){
+                    resolve(JSON.parse(this.response))
+                }
+                ajaxfetch.onerror=function(){
+                    reject(this.response)
+                }
+                ajaxfetch.send();
+            });
+           
+        }
+        let tvapi=function(){
+            return new Promise(function(resolve,reject){
+                let ajaxfetch=new XMLHttpRequest();
+                ajaxfetch.open("GET","https://api.tvmaze.com/search/shows?q=postman");
+                ajaxfetch.onload=function(){
+                    resolve(JSON.parse(this.response))
+                }
+                ajaxfetch.onerror=function(){
+                    reject(this.response)
+                }
+                ajaxfetch.send();
+            });
+           
+        }
+      Promise.allSettled([githubapi(),newsApi(),tvapi()]).then(data=>{
+        console.log(data);
+      }).catch(err=>console.log(err))
+
+
+
+
+    //ASYN AWAIT
+    // async function data(){
+    //     let data=await window.fetch("https://api.github.com/users");
+    //     let res=await data.json()
+    //     console.log(res);
+    // }
+    // data()
+
+    // ( async function data(){
+    //     let data=await window.fetch("https://api.github.com/users");
+    //     let res=await data.json()
+    //     console.log(res);
+    // } )()
+    </script>
+    <!-- <script src="./toplevel await fetch.mjs" type="module"></script> -->
+</body>
+</html>
